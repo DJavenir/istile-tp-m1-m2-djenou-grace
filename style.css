@@ -1,0 +1,185 @@
+/* declaration de couleur de la charte  ISTILE */
+:root {
+  --bleu: #1941B3;
+  --rouge: #FF135A;
+  --vert: #1C8275;
+  --texte: #1a1a1a;
+  --fond: #f5f7fb;
+  --blanc: #ffffff;
+  --bordure: #d5dbe8;
+  --rayon: 8px;
+}
+
+/* initialisation de la page */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--texte);
+  background-color: var(--fond);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+a {
+  color: var(--bleu);
+}
+
+/*  menu de navigation  */
+header {
+  padding: 1rem;
+  color: var(--blanc);
+  background-color: var(--bleu);
+  border-bottom: 4px solid var(--rouge);
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+nav a {
+  padding: 0.25rem 0.5rem;
+  color: var(--blanc);
+  text-decoration: none;
+  border-radius: var(--rayon);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Contenu principal  */
+main {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  padding-bottom: 0.25rem;
+  color: var(--bleu);
+  border-bottom: 2px solid var(--rouge);
+}
+
+/*  Formulaire  */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 30rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  color: var(--texte);
+  background-color: var(--blanc);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+}
+
+button {
+  padding: 0.6rem 1rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--blanc);
+  background-color: var(--vert);
+  border: none;
+  border-radius: var(--rayon);
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+/* Focus visible */
+a:focus-visible,
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--rouge);
+  outline-offset: 2px;
+}
+
+/*  Grille des étudiants  */
+.grille {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+article {
+  padding: 1rem;
+  background-color: var(--blanc);
+  border: 1px solid var(--bordure);
+  border-left: 5px solid var(--vert);
+  border-radius: var(--rayon);
+}
+
+article h3 {
+  margin: 0 0 0.5rem;
+  color: var(--bleu);
+}
+
+article p {
+  margin: 0.25rem 0;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  color: var(--blanc);
+  background-color: var(--bleu);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* mobile 640px  */
+@media (min-width: 640px) {
+  .grille {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  form {
+    flex-direction: row;
+    align-items: flex-end;
+    max-width: none;
+  }
+
+  form label {
+    align-self: center;
+  }
+}
+
+/* Ordinateur 1024px */
+@media (min-width: 1024px) {
+  .grille {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
