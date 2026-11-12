@@ -1,0 +1,12 @@
+tdjen@BESS8GRACE MINGW64 ~/Documents/Formation_ReactJs/istile-tp-m1-m2-djenou-grace (main)
+$ node -v
+v26.13.0
+
+tdjen@BESS8GRACE MINGW64 ~/Documents/Formation_ReactJs/istile-tp-m1-m2-djenou-grace (main)
+$ npm -v
+11.20.0
+
+tdjen@BESS8GRACE MINGW64 ~/Documents/Formation_ReactJs/istile-tp-m1-m2-djenou-grace (main)
+$ git --version
+git version 2.53.0.windows.2
+
